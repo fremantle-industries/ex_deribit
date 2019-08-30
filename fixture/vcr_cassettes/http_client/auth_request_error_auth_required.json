@@ -1,0 +1,29 @@
+[
+  {
+    "request": {
+      "body": "{}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://www.deribit.com/api/v1/private/account"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"usOut\":1566975764498421,\"usIn\":1566975764498420,\"usDiff\":1,\"testnet\":false,\"success\":false,\"message\":\"authorization_required\",\"error\":10000}",
+      "headers": {
+        "Server": "nginx",
+        "Date": "Wed, 28 Aug 2019 07:02:44 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "142",
+        "Connection": "keep-alive",
+        "Strict-Transport-Security": "max-age=15768000",
+        "X-Frame-Options": "SAMEORIGIN"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

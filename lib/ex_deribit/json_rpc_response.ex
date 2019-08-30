@@ -8,8 +8,9 @@ defmodule ExDeribit.JsonRpcResponse do
           testnet: boolean,
           us_diff: integer,
           us_in: integer,
-          us_out: integer
+          us_out: integer,
+          error: integer | nil
         }
 
-  defstruct ~w(message result success testnet us_diff us_in us_out)a
+  defstruct ~w(message result success testnet us_diff us_in us_out error)a
 end

@@ -1,7 +1,9 @@
 defmodule ExDeribit.Public do
   alias ExDeribit.HTTPClient
 
-  @spec get_instruments(boolean) :: term
+  @type instrument :: term
+
+  @spec get_instruments(boolean) :: {:ok, [instrument]} | {:error, :parse_result_item}
   def get_instruments(expired \\ false) do
     "/public/getinstruments"
     |> HTTPClient.non_auth_get(%{expired: expired})
@@ -18,7 +20,7 @@ defmodule ExDeribit.Public do
       {:ok, []},
       fn
         {:ok, i}, {:ok, acc} -> {:ok, [i | acc]}
-        _, _acc -> {:error, :parse_result_item_to_instrument}
+        _, _acc -> {:error, :parse_result_item}
       end
     )
   end
