@@ -14,6 +14,8 @@ end
 
 ## REST Status V2.0.0
 
+https://docs.deribit.com/v2/#deribit-api-v2-0-0
+
 #### Account Management
 
 - [ ] `/public/get_announcements`
