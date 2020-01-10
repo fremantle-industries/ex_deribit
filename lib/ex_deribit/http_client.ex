@@ -12,6 +12,9 @@ defmodule ExDeribit.HTTPClient do
   @spec domain :: String.t()
   def domain, do: @domain
 
+  @spec api_path :: String.t()
+  def api_path, do: @api_path
+
   @spec non_auth_get(path, params) :: non_auth_response
   def non_auth_get(path, params \\ %{}) do
     non_auth_request(:get, path, params)
