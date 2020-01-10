@@ -9,7 +9,11 @@ defmodule ExDeribit.MixProject do
       package: package(),
       start_permanent: Mix.env() == :prod,
       description: description(),
-      deps: deps()
+      deps: deps(),
+      dialyzer: [
+        plt_add_apps: [:mix, :ex_unit],
+        ignore_warnings: ".dialyzer_ignore.exs"
+      ]
     ]
   end
 
@@ -25,9 +29,9 @@ defmodule ExDeribit.MixProject do
       {:jason, "~> 1.1.0"},
       {:mapail, "~> 1.0.2"},
       {:ex_doc, ">= 0.0.0", only: :dev},
-      {:dialyxir, "~> 1.0.0-rc.6", only: [:dev], runtime: false},
-      {:mix_test_watch, "~> 0.8", only: :dev, runtime: false},
-      {:exvcr, "~> 0.10.0", only: [:dev, :test]},
+      {:dialyxir, "~> 1.0.0-rc.7", only: [:dev], runtime: false},
+      {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
+      {:exvcr, "~> 0.10", only: [:dev, :test]},
       {:ex_unit_notifier, "~> 0.1", only: :test}
     ]
   end
