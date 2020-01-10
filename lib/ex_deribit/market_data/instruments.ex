@@ -7,7 +7,7 @@ defmodule ExDeribit.MarketData.Instruments do
           optional(:expired) => boolean
         }
   @type instrument :: ExDeribit.Instrument.t()
-  @type result :: {:ok, [instrument]} | {:error, :parse_result_item_to_instrument}
+  @type result :: {:ok, [instrument]} | {:error, :parse_result_item}
 
   @path "/public/get_instruments"
   @currencies ~w(BTC ETH)
@@ -22,14 +22,14 @@ defmodule ExDeribit.MarketData.Instruments do
     |> parse_response()
   end
 
-  defp parse_response({:ok, %ExDeribit.JsonRpcResponse{result: instruments}}) do
-    instruments
+  defp parse_response({:ok, %ExDeribit.JsonRpcResponse{result: venue_instruments}}) do
+    venue_instruments
     |> Enum.map(&Mapail.map_to_struct(&1, ExDeribit.Instrument, transformations: [:snake_case]))
     |> Enum.reduce(
       {:ok, []},
       fn
         {:ok, i}, {:ok, acc} -> {:ok, [i | acc]}
-        _, _acc -> {:error, :parse_result_item_to_instrument}
+        _, _acc -> {:error, :parse_result_item}
       end
     )
   end

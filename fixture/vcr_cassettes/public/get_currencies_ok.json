@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://www.deribit.com/api/v2/public/get_currencies"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[{\"withdrawal_priorities\":[],\"withdrawal_fee\":0.0001,\"min_withdrawal_fee\":0.0001,\"min_confirmations\":30,\"fee_precision\":4,\"currency_long\":\"Ethereum\",\"currency\":\"ETH\",\"coin_type\":\"ETHER\"},{\"withdrawal_priorities\":[{\"value\":0.15,\"name\":\"very_low\"},{\"value\":1.25,\"name\":\"high\"},{\"value\":1.5,\"name\":\"very_high\"},{\"value\":2.0,\"name\":\"insane\"}],\"withdrawal_fee\":0.0005,\"min_withdrawal_fee\":0.0005,\"min_confirmations\":1,\"fee_precision\":4,\"currency_long\":\"Bitcoin\",\"currency\":\"BTC\",\"coin_type\":\"BITCOIN\"}],\"usIn\":1578697486732903,\"usOut\":1578697486732964,\"usDiff\":61,\"testnet\":false}",
+      "headers": {
+        "Server": "nginx",
+        "Date": "Fri, 10 Jan 2020 23:04:46 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "601",
+        "Connection": "keep-alive",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Authorization,User-Agent,Range,X-Requested-With,Content-Type,Partner",
+        "Strict-Transport-Security": "max-age=15768000",
+        "X-Frame-Options": "SAMEORIGIN"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

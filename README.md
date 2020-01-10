@@ -83,7 +83,7 @@ end
 - [ ] `/public/get_book_summary_by_currency`
 - [ ] `/public/get_book_summary_by_instrument`
 - [ ] `/public/get_contract_size`
-- [ ] `/public/get_currencies`
+- [x] `/public/get_currencies`
 - [ ] `/public/get_funding_chart_data`
 - [ ] `/public/get_funding_rate_history`
 - [ ] `/public/get_funding_rate_value`
