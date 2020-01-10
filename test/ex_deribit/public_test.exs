@@ -9,11 +9,11 @@ defmodule ExDeribit.PublicTest do
   end
 
   test ".get_instruments/1" do
-    use_cassette "public/get_instruments" do
-      {:ok, instruments} = ExDeribit.Public.get_instruments()
+    use_cassette "public/get_instruments_ok" do
+      {:ok, instruments} = ExDeribit.Public.get_instruments(:btc)
       assert Enum.count(instruments) != 0
       assert %ExDeribit.Instrument{} = instrument = Enum.at(instruments, 0)
-      assert instrument.currency != nil
+      assert instrument.base_currency != nil
     end
   end
 end

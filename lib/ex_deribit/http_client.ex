@@ -6,7 +6,7 @@ defmodule ExDeribit.HTTPClient do
 
   @protocol Application.get_env(:ex_deribit, :protocol, "https://")
   @domain Application.get_env(:ex_deribit, :domain, "www.deribit.com")
-  @api_path Application.get_env(:ex_deribit, :api_path, "/api/v1")
+  @api_path Application.get_env(:ex_deribit, :api_path, "/api/v2")
   @origin @protocol <> @domain
 
   @spec domain :: String.t()
@@ -19,14 +19,13 @@ defmodule ExDeribit.HTTPClient do
 
   @spec non_auth_request(verb, path :: String.t(), params) :: non_auth_response
   def non_auth_request(verb, path, params) do
-    body = Jason.encode!(params)
     headers = [] |> put_content_type(:json)
 
     %HTTPoison.Request{
       method: verb,
       url: path |> url,
       headers: headers,
-      body: body
+      params: params
     }
     |> send
   end
