@@ -1,7 +1,7 @@
-defmodule ExDeribit.Public do
+defmodule ExDeribit.MarketData.Instruments do
   alias ExDeribit.HTTPClient
 
-  @type currency :: :btc | :eth
+  @type currency :: String.t()
   @type opts :: %{
           optional(:kind) => :future | :option,
           optional(:expired) => boolean
@@ -10,13 +10,12 @@ defmodule ExDeribit.Public do
   @type result :: {:ok, [instrument]} | {:error, :parse_result_item_to_instrument}
 
   @path "/public/get_instruments"
-  @currencies ~w(btc eth)a
+  @currencies ~w(BTC ETH)
 
-  @spec get_instruments(currency) :: result
-  @spec get_instruments(currency, opts) :: result
-  def get_instruments(currency, opts \\ %{}) when currency in @currencies do
-    venue_currency = currency |> to_venue_currency()
-    params = Map.put(opts, :currency, venue_currency)
+  @spec get(currency) :: result
+  @spec get(currency, opts) :: result
+  def get(currency, opts \\ %{}) when currency in @currencies do
+    params = Map.put(opts, :currency, currency)
 
     @path
     |> HTTPClient.non_auth_get(params)
@@ -34,7 +33,4 @@ defmodule ExDeribit.Public do
       end
     )
   end
-
-  defp to_venue_currency(:btc), do: "BTC"
-  defp to_venue_currency(:eth), do: "ETH"
 end
