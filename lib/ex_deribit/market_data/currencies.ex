@@ -15,7 +15,7 @@ defmodule ExDeribit.MarketData.Currencies do
 
   defp parse_response({:ok, %ExDeribit.JsonRpcResponse{result: venue_currencies}}) do
     venue_currencies
-    |> Enum.map(&Mapail.map_to_struct(&1, ExDeribit.Currency, transformations: [:snake_case]))
+    |> Enum.map(&Mapail.map_to_struct(&1, ExDeribit.Currency))
     |> Enum.reduce(
       {:ok, []},
       fn

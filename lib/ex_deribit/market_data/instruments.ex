@@ -24,7 +24,7 @@ defmodule ExDeribit.MarketData.Instruments do
 
   defp parse_response({:ok, %ExDeribit.JsonRpcResponse{result: venue_instruments}}) do
     venue_instruments
-    |> Enum.map(&Mapail.map_to_struct(&1, ExDeribit.Instrument, transformations: [:snake_case]))
+    |> Enum.map(&Mapail.map_to_struct(&1, ExDeribit.Instrument))
     |> Enum.reduce(
       {:ok, []},
       fn
