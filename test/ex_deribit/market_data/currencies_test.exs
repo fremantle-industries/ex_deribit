@@ -9,7 +9,7 @@ defmodule ExDeribit.MarketData.CurrenciesTest do
   end
 
   test ".get/0" do
-    use_cassette "public/get_currencies_ok" do
+    use_cassette "market_data/get_currencies_ok" do
       assert {:ok, currencies} = ExDeribit.MarketData.Currencies.get()
       assert Enum.count(currencies) != 0
       assert %ExDeribit.Currency{} = currency = Enum.at(currencies, 0)

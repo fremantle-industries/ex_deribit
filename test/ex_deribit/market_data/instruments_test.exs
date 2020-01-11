@@ -9,7 +9,7 @@ defmodule ExDeribit.MarketData.InstrumentsTest do
   end
 
   test ".get/1" do
-    use_cassette "public/get_instruments_ok" do
+    use_cassette "market_data/get_instruments_ok" do
       assert {:ok, instruments} = ExDeribit.MarketData.Instruments.get("BTC")
       assert Enum.count(instruments) != 0
       assert %ExDeribit.Instrument{} = instrument = Enum.at(instruments, 0)
