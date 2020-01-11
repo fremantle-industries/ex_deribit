@@ -13,6 +13,13 @@ defmodule ExDeribit.MixProject do
       dialyzer: [
         plt_add_apps: [:mix, :ex_unit],
         ignore_warnings: ".dialyzer_ignore.exs"
+      ],
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
       ]
     ]
   end
@@ -32,7 +39,8 @@ defmodule ExDeribit.MixProject do
       {:dialyxir, "~> 1.0.0-rc.7", only: [:dev], runtime: false},
       {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
       {:exvcr, "~> 0.10", only: [:dev, :test]},
-      {:ex_unit_notifier, "~> 0.1", only: :test}
+      {:ex_unit_notifier, "~> 0.1", only: :test},
+      {:excoveralls, "~> 0.10", only: :test}
     ]
   end
 

@@ -1,4 +1,5 @@
 # ExDeribit
+[![Build Status](https://github.com/fremantle-capital/ex_deribit/workflows/Test/badge.svg?branch=master)](https://github.com/fremantle-capital/ex_deribit/actions?query=workflow%3ATest)
 
 Deribit API Client for Elixir
 
