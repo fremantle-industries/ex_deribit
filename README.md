@@ -28,7 +28,7 @@ https://docs.deribit.com/v2/#deribit-api-v2-0-0
 - [ ] `/private/disable_api_key`
 - [ ] `/private/disable_tfa_for_subaccount`
 - [ ] `/private/enable_api_key`
-- [ ] `/private/get_account_summary`
+- [x] `/private/get_account_summary`
 - [ ] `/private/get_email_language`
 - [ ] `/private/get_new_announcements`
 - [ ] `/private/get_position`
