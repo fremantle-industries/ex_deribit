@@ -3,7 +3,7 @@ defmodule ExDeribit.Accounts.Summary do
 
   @type currency :: String.t()
   @type account_summary :: ExDeribit.AccountSummary.t()
-  @type result :: {:ok, [account_summary]} | {:error, term}
+  @type result :: {:ok, account_summary} | {:error, term}
   @type credentials :: ExDeribit.Credentials.t()
 
   @path "/private/get_account_summary"
