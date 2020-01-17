@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://test.deribit.com/api/v2/public/get_announcements?count=1&start_timestamp=1579300967551"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[{\"title\":\"Rate-limits TESTNET adjusted to the rate-limits as on Production.\",\"publication_timestamp\":1575975809000,\"important\":false,\"id\":1575976002876,\"body\":\"<p>Today, 10th of December 2019, we have adjusted the rate-limits of our TESTNET to the rate-limits of production.&nbsp;</p><p>This way we are able to provide a better test environment for our users that would like to test their algorithms reacting on reaching the rate-limits.</p><p><br></p><p>Deribit</p>\"}],\"usIn\":1579300967640703,\"usOut\":1579300967640734,\"usDiff\":31,\"testnet\":true}",
+      "headers": {
+        "Server": "nginx/1.17.6",
+        "Date": "Fri, 17 Jan 2020 22:42:47 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "573",
+        "Connection": "keep-alive",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Authorization,User-Agent,Range,X-Requested-With,Content-Type,Partner",
+        "Strict-Transport-Security": "max-age=15768000",
+        "X-Frame-Options": "SAMEORIGIN"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

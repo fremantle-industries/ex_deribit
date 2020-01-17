@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://test.deribit.com/api/v2/public/get_announcements?"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[{\"title\":\"Rate-limits TESTNET adjusted to the rate-limits as on Production.\",\"publication_timestamp\":1575975809000,\"important\":false,\"id\":1575976002876,\"body\":\"<p>Today, 10th of December 2019, we have adjusted the rate-limits of our TESTNET to the rate-limits of production.&nbsp;</p><p>This way we are able to provide a better test environment for our users that would like to test their algorithms reacting on reaching the rate-limits.</p><p><br></p><p>Deribit</p>\"},{\"title\":\"Maintenance BTC wallets finished.\",\"publication_timestamp\":1570731539000,\"important\":false,\"id\":1570731561369,\"body\":\"<p>Today 10/10/19 we finished maintaining our testnet BTC wallets.</p><p>Users will have to generate a new deposit and withdrawal address (BTC only).</p>\"},{\"title\":\"Test announcement: Deribit adds LMAX Digital to its indexes\",\"publication_timestamp\":1570550689000,\"important\":false,\"id\":1570550816755,\"body\":\"<div><b>THIS IS A TEST ANNOUNCEMENT</b><br><br>We continue to increase the number of our index constituents and further decrease the risk of market manipulation by adding a new exchange - LMAX Digital to our index calculation. LMAX Digital is a leading exchange in institutional spot trading, and this addition will even further enhance the accuracy of our reference rates. Moreover, we will also be re-introducing Coinbase Pro to the index. This applies to both our Bitcoin index and Ethereum index.<br></div><div>&nbsp;</div><div><span style=\\\"font-weight: 700;\\\">This addition will be implemented on 11th October at 08:10 UTC.<br><br>END OF TEST ANNOUNCEMENT</span></div>\"},{\"title\":\"just another test\",\"publication_timestamp\":1570544890000,\"important\":false,\"id\":1570544918522,\"body\":\"just another test!!\"},{\"title\":\"test\",\"publication_timestamp\":1570544750000,\"important\":false,\"id\":1570544760189,\"body\":\"test announcement\"}],\"usIn\":1579300966904396,\"usOut\":1579300966904428,\"usDiff\":32,\"testnet\":true}",
+      "headers": {
+        "Server": "nginx/1.17.6",
+        "Date": "Fri, 17 Jan 2020 22:42:46 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "1941",
+        "Connection": "keep-alive",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Authorization,User-Agent,Range,X-Requested-With,Content-Type,Partner",
+        "Strict-Transport-Security": "max-age=15768000",
+        "X-Frame-Options": "SAMEORIGIN"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

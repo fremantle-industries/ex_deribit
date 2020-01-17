@@ -35,6 +35,7 @@ defmodule ExDeribit.MixProject do
       {:httpoison, "~> 1.0"},
       {:jason, "~> 1.1.0"},
       {:mapail, "~> 1.0.2"},
+      {:timex, "~> 3.5"},
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:dialyxir, "~> 1.0.0-rc.7", only: [:dev], runtime: false},
       {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},

@@ -19,7 +19,7 @@ https://docs.deribit.com/v2/#deribit-api-v2-0-0
 
 #### Account Management
 
-- [ ] `/public/get_announcements`
+- [x] `/public/get_announcements`
 - [ ] `/private/change_api_key_name`
 - [ ] `/private/change_scope_in_api_key`
 - [ ] `/private/change_subaccount_name`
