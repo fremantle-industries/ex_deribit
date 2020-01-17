@@ -8,8 +8,8 @@ defmodule ExDeribit.Accounts.Summary do
 
   @path "/private/get_account_summary"
 
-  @spec get(currency, credentials) :: result
-  def get(currency, credentials) do
+  @spec get(credentials, currency) :: result
+  def get(credentials, currency) do
     @path
     |> HTTPClient.auth_get(credentials, %{currency: currency})
     |> parse_response()

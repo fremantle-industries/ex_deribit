@@ -32,7 +32,7 @@ https://docs.deribit.com/v2/#deribit-api-v2-0-0
 - [ ] `/private/get_email_language`
 - [ ] `/private/get_new_announcements`
 - [ ] `/private/get_position`
-- [ ] `/private/get_positions`
+- [x] `/private/get_positions`
 - [ ] `/private/get_subaccounts`
 - [ ] `/private/list_api_keys`
 - [ ] `/private/remove_api_key`
