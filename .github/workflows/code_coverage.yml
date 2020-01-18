@@ -1,22 +1,19 @@
-name: Test
+name: Code Coverage
 
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - '*'
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: OTP ${{matrix.otp}} / Elixir ${{matrix.elixir}}
+    name: Test OTP ${{matrix.otp}} / Elixir ${{matrix.elixir}}
 
     strategy:
       matrix:
         otp: [21.x, 22.x]
-        elixir: [1.7.x, 1.8.x, 1.9.x]
+        elixir: [1.7, 1.8.x, 1.9.x]
 
     steps:
       - uses: actions/checkout@v1.0.0
@@ -35,15 +32,6 @@ jobs:
             deps-elixir-${{matrix.elixir}}-otp-${{matrix.otp}}-${{runner.os}}-${{hashFiles('mix.lock')}}-${{github.ref}}
             deps-elixir-${{matrix.elixir}}-otp-${{matrix.otp}}-${{runner.os}}-${{hashFiles('mix.lock')}}-
 
-      - name: Cache Dev Build
-        uses: actions/cache@v1
-        with:
-          path: _build/dev
-          key: dev-build-elixir-${{matrix.elixir}}-otp-${{matrix.otp}}-${{runner.os}}-${{hashFiles('mix.lock')}}-${{github.ref}}
-          restore-keys: |
-            dev-build-elixir-${{matrix.elixir}}-otp-${{matrix.otp}}-${{runner.os}}-${{hashFiles('mix.lock')}}-${{github.ref}}
-            dev-build-elixir-${{matrix.elixir}}-otp-${{matrix.otp}}-${{runner.os}}-${{hashFiles('mix.lock')}}-
-
       - name: Cache Test Build
         uses: actions/cache@v1
         with:
@@ -56,11 +44,10 @@ jobs:
       - name: Install Dependencies
         run: mix deps.get
 
-      - name: Test
+      - name: Coveralls
         env:
+          MIX_ENV: test
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           DERIBIT_CLIENT_ID: abc123
           DERIBIT_CLIENT_SECRET: abc123
-        run: mix test
-
-      - name: Dialyzer
-        run: mix dialyzer --halt-exit-status
+        run: mix coveralls.github
