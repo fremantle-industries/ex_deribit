@@ -4,7 +4,7 @@ defmodule ExDeribit.MixProject do
   def project do
     [
       app: :ex_deribit,
-      version: "0.0.3",
+      version: "0.0.4",
       elixir: "~> 1.7",
       package: package(),
       start_permanent: Mix.env() == :prod,
