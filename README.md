@@ -31,7 +31,7 @@ https://docs.deribit.com/v2/#deribit-api-v2-0-0
 - [x] `/private/get_account_summary`
 - [ ] `/private/get_email_language`
 - [ ] `/private/get_new_announcements`
-- [ ] `/private/get_position`
+- [x] `/private/get_position`
 - [x] `/private/get_positions`
 - [ ] `/private/get_subaccounts`
 - [ ] `/private/list_api_keys`

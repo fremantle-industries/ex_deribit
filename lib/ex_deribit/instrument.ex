@@ -1,6 +1,7 @@
 defmodule ExDeribit.Instrument do
   alias __MODULE__
 
+  @type name :: String.t()
   @type t :: %Instrument{
           tick_size: number,
           taker_commission: number,
@@ -11,7 +12,7 @@ defmodule ExDeribit.Instrument do
           leverage: number,
           kind: String.t(),
           is_active: boolean,
-          instrument_name: String.t(),
+          instrument_name: name,
           expiration_timestamp: pos_integer,
           creation_timestamp: pos_integer,
           contract_size: pos_integer,

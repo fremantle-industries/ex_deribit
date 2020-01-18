@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://test.deribit.com/api/v2/private/get_position?instrument_name=BTC-PERPETUAL"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":{\"total_profit_loss\":0.0,\"size_currency\":0.0,\"size\":0.0,\"settlement_price\":8927.7,\"realized_profit_loss\":1.88e-7,\"realized_funding\":0.0,\"open_orders_margin\":0.0,\"mark_price\":8935.14,\"maintenance_margin\":0.0,\"leverage\":100,\"kind\":\"future\",\"instrument_name\":\"BTC-PERPETUAL\",\"initial_margin\":0.0,\"index_price\":8925.98,\"floating_profit_loss\":0.0,\"estimated_liquidation_price\":0.0,\"direction\":\"zero\",\"delta\":0.0,\"average_price\":0.0},\"usIn\":1579306535990488,\"usOut\":1579306535990685,\"usDiff\":197,\"testnet\":true}",
+      "headers": {
+        "Server": "nginx/1.17.6",
+        "Date": "Sat, 18 Jan 2020 00:15:35 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "531",
+        "Connection": "keep-alive",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Authorization,User-Agent,Range,X-Requested-With,Content-Type,Partner",
+        "Strict-Transport-Security": "max-age=15768000",
+        "X-Frame-Options": "SAMEORIGIN"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
