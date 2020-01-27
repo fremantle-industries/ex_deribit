@@ -85,7 +85,7 @@ defmodule ExDeribit.HTTPClient do
     timestamp = ExDeribit.Auth.timestamp()
 
     signature =
-      ExDeribit.Auth.sign(
+      ExDeribit.Auth.sign_http(
         credentials.client_secret,
         timestamp,
         nonce,
