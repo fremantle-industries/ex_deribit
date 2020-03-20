@@ -37,7 +37,7 @@ defmodule ExDeribit.MixProject do
       {:mapail, "~> 1.0.2"},
       {:timex, "~> 3.5"},
       {:ex_doc, ">= 0.0.0", only: :dev},
-      {:dialyxir, "~> 1.0.0-rc.7", only: [:dev], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
       {:exvcr, "~> 0.10", only: [:dev, :test]},
       {:ex_unit_notifier, "~> 0.1", only: :test},
