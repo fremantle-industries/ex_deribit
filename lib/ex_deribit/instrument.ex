@@ -16,7 +16,9 @@ defmodule ExDeribit.Instrument do
           expiration_timestamp: pos_integer,
           creation_timestamp: pos_integer,
           contract_size: pos_integer,
-          base_currency: String.t()
+          base_currency: String.t(),
+          strike: number | nil,
+          option_type: String.t() | nil
         }
 
   defstruct ~w(
@@ -34,5 +36,7 @@ defmodule ExDeribit.Instrument do
     creation_timestamp
     contract_size
     base_currency
+    strike
+    option_type
   )a
 end
