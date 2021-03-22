@@ -1,6 +1,6 @@
 # ExDeribit
-[![Build Status](https://github.com/fremantle-capital/ex_deribit/workflows/Test/badge.svg?branch=master)](https://github.com/fremantle-capital/ex_deribit/actions?query=workflow%3ATest)
-[![Coverage Status](https://coveralls.io/repos/github/fremantle-capital/ex_deribit/badge.svg?branch=master)](https://coveralls.io/github/fremantle-capital/ex_deribit?branch=master)
+[![Build Status](https://github.com/fremantle-capital/ex_deribit/workflows/Test/badge.svg?branch=main)](https://github.com/fremantle-capital/ex_deribit/actions?query=workflow%3ATest)
+[![Coverage Status](https://coveralls.io/repos/github/fremantle-capital/ex_deribit/badge.svg?branch=main)](https://coveralls.io/github/fremantle-capital/ex_deribit?branch=main)
 [![hex.pm version](https://img.shields.io/hexpm/v/ex_deribit.svg?style=flat)](https://hex.pm/packages/ex_deribit)
 
 Deribit API Client for Elixir
