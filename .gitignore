@@ -20,4 +20,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-ex_huobi-*.tar
+ex_deribit-*.tar
+
+# Environment variables
+.env*
