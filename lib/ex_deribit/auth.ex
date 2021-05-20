@@ -2,8 +2,8 @@ defmodule ExDeribit.Auth do
   def sign(client_secret, timestamp, nonce, data) do
     string_to_sign = [timestamp, nonce, data] |> Enum.join("\n")
 
-    :sha256
-    |> :crypto.hmac(client_secret, string_to_sign)
+    :hmac
+    |> :crypto.mac(:sha256, client_secret, string_to_sign)
     |> Base.encode16()
   end
 
