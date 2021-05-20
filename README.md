@@ -11,7 +11,7 @@ Add the `ex_deribit` package to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:ex_deribit, "~> 0.0.7"}]
+  [{:ex_deribit, "~> 0.0.8"}]
 end
 ```
 
