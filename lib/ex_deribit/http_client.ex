@@ -7,16 +7,17 @@ defmodule ExDeribit.HTTPClient do
   @type non_auth_response :: term
   @type auth_response :: term
 
-  @protocol Application.get_env(:ex_deribit, :protocol, "https://")
-  @domain Application.get_env(:ex_deribit, :domain, "www.deribit.com")
-  @api_path Application.get_env(:ex_deribit, :api_path, "/api/v2")
-  @origin @protocol <> @domain
+  @spec protocol :: String.t()
+  def protocol, do: Application.get_env(:ex_deribit, :protocol, "https://")
 
   @spec domain :: String.t()
-  def domain, do: @domain
+  def domain, do: Application.get_env(:ex_deribit, :domain, "www.deribit.com")
 
   @spec api_path :: String.t()
-  def api_path, do: @api_path
+  def api_path, do: Application.get_env(:ex_deribit, :api_path, "/api/v2")
+
+  @spec origin :: String.t()
+  def origin, do: protocol() <> domain()
 
   @spec auth_get(path, credentials, params) :: auth_response
   def auth_get(path, credentials, params) do
@@ -59,11 +60,11 @@ defmodule ExDeribit.HTTPClient do
   end
 
   @spec url(uri :: String.t()) :: String.t()
-  def url(uri), do: @origin <> uri
+  def url(uri), do: origin() <> uri
 
   defp to_uri(path, params) do
     %URI{
-      path: "#{@api_path}#{path}",
+      path: "#{api_path()}#{path}",
       query: URI.encode_query(params)
     }
     |> URI.to_string()
